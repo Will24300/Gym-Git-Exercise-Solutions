@@ -6,39 +6,40 @@
 
 ```bash
 
-$ git init
+# initialize a git repository
+$ git init                  # Create a new empty Git repository in the current folder
 
-$ git status
+$ git status                # Show current status (changes, untracked files, branch info)
 
-$ git branch -m master main
+$ git branch -m master main # Rename the default branch from "master" to "main"
 
-$ git status
+$ git status                # Check the branch name again and repository status
 
-$ git add .
+$ git add .                 # Stage all changes in the current directory for commit
 
-$ git status
+$ git status                # Confirm that files are staged
 
-$ git commit -m "Add new files"
+$ git commit -m "Add new files" # Save staged changes into Git history with a commit message
 
-$ git remote add origin https://github.com/Will24300/gym-exercise1.git
-git branch -M main
-git push -u origin main
+$ git remote add origin https://github.com/Will24300/gym-exercise1.git # Connect local repo to GitHub
+git branch -M main          # Force rename branch to "main" (capital M overwrites if exists)
+git push -u origin main     # Push main branch to GitHub and set it as the upstream
 
-$ git checkout -b div
+$ git checkout -b div       # Create and switch to a new branch called "div"
 
-$ git branch -m div dev
+$ git branch -m div dev     # Rename branch "div" to "dev"
 
-$ git push origin dev
+$ git push origin dev       # Push "dev" branch to GitHub
 
-$ git checkout -b test
+$ git checkout -b test      # Create and switch to "test" branch
 
-$ git push origin test
+$ git push origin test      # Push "test" branch to GitHub
 
-$ git checkout dev
+$ git checkout dev          # Switch back to "dev" branch
 
-$ git branch -d test
+$ git branch -d test        # Delete the "test" branch locally
 
-$ git push origin --delete dev
+$ git push origin --delete dev  # Delete the "dev" branch on GitHub
 
 ```
 
@@ -46,41 +47,42 @@ $ git push origin --delete dev
 
 ```bash
 
-$ git add home.html
+$ git add home.html         # Stage home.html
 
-$ git stash
+$ git stash                 # Save staged changes temporarily (removes from working dir + staging)
 
-$ git add about.html
+$ git add about.html        # Stage about.html
 
-$ git stash
+$ git stash                 # Save about.html changes temporarily
 
-$ git add team.html
+$ git add team.html         # Stage team.html
 
-$ git stash
+$ git stash                 # Save team.html changes temporarily
 
-$ git status
+$ git status                # Check working tree status
 
-$ git stash list
+$ git stash list            # Show list of stashes (saved changes)
 
-$ git stash pop stash@{1}
+$ git stash pop stash@{1}   # Apply stash number 1 and remove it from stash list
 
-$ git status
+$ git status                # Check what changes came back
 
-$ git stash list
+$ git stash list            # Show remaining stashes
 
-$ git stash pop stash@{1}
+$ git stash pop stash@{1}   # Apply the next stash (new stash index after pop)
 
-$ git status
+$ git status                # Verify applied changes
 
-$ git add .
+$ git add .                 # Stage all applied files
 
-$ git push
+$ git push                  # Push committed changes to GitHub
 
-$ git stash list
+$ git stash list            # Show if stashes remain
 
-$ git stash pop stash@{0}
+$ git stash pop stash@{0}   # Apply the last stash in the list
 
-$ git restore --hard
+$ git reset --hard          # to rest all over my files
+
 
 ```
 
@@ -89,18 +91,17 @@ $ git restore --hard
 ### Exercise 1
 
 ```bash
+$ git checkout -b ft/bundle-2   # Create and switch to branch "ft/bundle-2"
 
-$ git checkout -b ft/bundle-2
+$ git status                    # Check working directory status
 
-$ git status
+$ git add services.html         # Stage services.html file
 
-$ git add services.html
+$ git commit -m "Add services file"  # Commit new services file
 
-$ git commit -m "Add services file"
+$ git push origin ft/bundle-2   # Push "ft/bundle-2" branch to GitHub
 
-$ git push origin ft/bundle-2
-
-$ git checkout main
+$ git checkout main             # Switch back to main branch
 
 
 ```
@@ -108,39 +109,39 @@ $ git checkout main
 ### Exercise 2
 
 ```bash
+$ git checkout main             # Switch to main branch
 
-$ git checkout main
+$ git pull                      # Get the latest changes from GitHub
 
-$ git pull
+$ git checkout -b ft/service-redesign   # Create new branch "ft/service-redesign"
 
-$ git checkout -b ft/service-redesign
+$ git status                    # Check changes status
 
-$ git status
+$ git add .                     # Stage all changes
 
-$ git add .
+$ git commit -m "Update service page"   # Commit update
 
-$ git commit -m "Update service page"
+$ git push origin ft/service-redesign   # Push "ft/service-redesign" branch
 
-$ git push origin ft/service-redesign
+$ git checkout main             # Switch to main branch
 
-$ git checkout main
+$ git add .                     # Stage main branch changes
 
-$ git add .
+$ git commit -m "Add changes to service page" # Commit on main branch
 
-$ git commit -m "Add changes to service page"
+$ git push                      # Push changes to GitHub main
 
-$ git push
+$ git checkout ft/service-redesign   # Switch to redesign branch
 
-$ git checkout ft/service-redesign
+$ git pull                      # Update branch with remote changes
 
-$ git pull
+$ git merge main                # Merge main into ft/service-redesign (possible conflicts)
 
-$ git merge main
+$ git add .                     # Stage resolved files
 
-$ git add .
+$ git commit                    # Finish merge commit
 
-$ git commit
+$ git push origin ft/service-redesign   # Push merged branch to GitHub
 
-$ git push origin ft/service-redesign
 
 ```
