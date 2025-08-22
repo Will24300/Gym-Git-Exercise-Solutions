@@ -83,3 +83,24 @@ $ git stash pop stash@{0}
 $ git restore --hard
 
 ```
+
+## Bundle 2
+
+### Exercise 1
+
+```bash
+
+$ git checkout -b ft/bundle-2
+
+$ git status
+
+$ git add services.html
+
+$ git commit -m "Add services file"
+
+$ git push origin ft/bundle-2
+
+$ git checkout main
+
+
+```
