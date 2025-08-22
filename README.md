@@ -41,3 +41,45 @@ $ git branch -d test
 $ git push origin --delete dev
 
 ```
+
+### Exercise 2
+
+```bash
+
+$ git add home.html
+
+$ git stash
+
+$ git add about.html
+
+$ git stash
+
+$ git add team.html
+
+$ git stash
+
+$ git status
+
+$ git stash list
+
+$ git stash pop stash@{1}
+
+$ git status
+
+$ git stash list
+
+$ git stash pop stash@{1}
+
+$ git status
+
+$ git add .
+
+$ git push
+
+$ git stash list
+
+$ git stash pop stash@{0}
+
+$ git restore --hard
+
+```
