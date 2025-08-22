@@ -104,3 +104,43 @@ $ git checkout main
 
 
 ```
+
+### Exercise 2
+
+```bash
+
+$ git checkout main
+
+$ git pull
+
+$ git checkout -b ft/service-redesign
+
+$ git status
+
+$ git add .
+
+$ git commit -m "Update service page"
+
+$ git push origin ft/service-redesign
+
+$ git checkout main
+
+$ git add .
+
+$ git commit -m "Add changes to service page"
+
+$ git push
+
+$ git checkout ft/service-redesign
+
+$ git pull
+
+$ git merge main
+
+$ git add .
+
+$ git commit
+
+$ git push origin ft/service-redesign
+
+```
