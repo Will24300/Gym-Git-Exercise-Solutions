@@ -145,3 +145,56 @@ $ git push origin ft/service-redesign   # Push merged branch to GitHub
 
 
 ```
+
+## Bundle 3
+
+### Exercise 1
+
+```bash
+
+$ git checkout -b ft/team-page
+
+$ git add team.html
+
+$ git commit -m "Add team page"
+
+$ git push origin ft/team-page
+
+$ git checkout main
+
+$ git checkout -b ft/contact-page
+
+$ git checkout ft/team-page
+
+$ git log --oneline
+
+$ git checkout ft/contact-page
+
+$ git cherry-pick a5a66b6
+
+$ git status
+
+$ git add .
+
+$ git commit -m "Copy team page "
+
+$ git push origin ft/contact-page
+
+$ git checkout -b ft/faq-page
+
+$ git add faq.html
+
+$ git commit -m "Add faq page"
+
+$ git push origin ft/faq-page
+
+$ git checkout ft/team-page
+
+$ git log --oneline
+
+$ git revert a5a66b6
+
+$ git push origin ft/team-page
+
+
+```
