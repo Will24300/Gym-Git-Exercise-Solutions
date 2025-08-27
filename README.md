@@ -222,3 +222,22 @@ $ git push origin ft/team-page
 
 
 ```
+
+### Exercise 2
+
+```bash
+
+$ git checkout ft/faq-page                 # switch to existing feature branch
+$ git checkout -b ft/home-page-redesign    # create and switch to new branch for redesign work
+$ git checkout main                        # move to main branch
+$ git status                               # check branch status and changes
+$ git add index.html                       # stage index.html file
+$ git commit -m "Add index file"           # commit index.html with message
+$ git push                                 # push main branch to remote
+$ git checkout ft/home-page-redesign       # switch back to redesign branch
+$ git rebase main                          # reapply redesign commits on top of updated main
+$ git add .                                # stage all modified files
+$ git commit -m "Add features to home page" # commit redesign changes
+$ git push origin ft/home-page-redesign    # push redesign branch to remote
+
+```
