@@ -241,3 +241,31 @@ $ git commit -m "Add features to home page" # commit redesign changes
 $ git push origin ft/home-page-redesign    # push redesign branch to remote
 
 ```
+
+## Bundle 4
+
+### Exercise 1
+
+```bash
+# Switch to the main branch
+$ git checkout main
+
+# Add a new remote named "git-copy" pointing to another GitHub repo
+$ git remote add git-copy https://github.com/Will24300/git-copy.git
+
+# List all configured remotes (should now show "origin" and "git-copy")
+$ git remote
+
+# Stage the file home.html for the next commit
+$ git add home.html
+
+# Commit the staged changes with a message describing them
+$ git commit -m "add some changes"
+
+# Push the current branch (main) to the default remote "origin"
+$ git push origin
+
+# Push the same branch to the second remote "git-copy"
+$ git push git-copy
+
+```
