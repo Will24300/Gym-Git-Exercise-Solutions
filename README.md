@@ -309,3 +309,26 @@ $ git push origin ft/squashing
 
 
 ```
+
+## Bundle 5
+
+### Exercise 2
+
+```bash
+
+$ git add .
+# Stage all modified, new, and deleted files in the current directory for the next commit.
+
+$ git status
+# Show the current status of the working directory and staging area
+# (which files are staged, unstaged, or untracked).
+
+$ git commit -m "Change the main title"
+# Commit all staged changes with the message "Change the main title".
+
+$ git push
+# Push the current branch and its commits to the remote repository.
+
+
+
+```
