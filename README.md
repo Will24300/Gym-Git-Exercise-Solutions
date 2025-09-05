@@ -269,3 +269,43 @@ $ git push origin
 $ git push git-copy
 
 ```
+
+### Exercise 2
+
+```bash
+$ git checkout -b ft/footer
+# Create and switch to a new branch called 'ft/footer' from the current branch.
+
+$ git add foo.html
+# Stage the file 'foo.html' to include it in the next commit.
+
+$ git commit -m "foo html"
+# Commit the staged changes with the message "foo html".
+
+$ git add foo.html
+# Stage 'foo.html' again (likely after making new edits).
+
+$ git commit -m "Add title"
+# Commit the new staged changes with the message "Add title".
+
+$ git push origin ft/footer
+# Push the 'ft/footer' branch and its commits to the remote repository.
+
+$ git checkout main
+# Switch back to the 'main' branch.
+
+$ git checkout -b ft/squashing
+# Create and switch to a new branch called 'ft/squashing' from 'main'.
+
+$ git merge --squash ft/footer
+# Merge changes from 'ft/footer' into 'ft/squashing' as a single squashed commit
+# (does not create merge commits; instead stages all changes at once).
+
+$ git commit -m "footer changes squashing"
+# Commit all the squashed changes as one commit with a descriptive message.
+
+$ git push origin ft/squashing
+# Push the 'ft/squashing' branch and its commit to the remote repository.
+
+
+```
